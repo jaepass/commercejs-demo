@@ -71,7 +71,7 @@ body {
 }
 
 .hero-wrapper{
-  background-image: url("./assets/hero-img.png");
+  background-image: url("/hero-img.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;

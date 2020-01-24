@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <div class="hero">
+    <div class="hero-wrapper">
       <img src="/logo.svg" alt="Logo">
     </div>
     <!-- Products catalogue -->
@@ -70,21 +70,17 @@ body {
   margin-top: 60px; */
 }
 
-/* .hero-img{
-  background-image: url("./assets/hero.png");
-  grid-area: img1;
+.hero-wrapper{
+  background-image: url("./assets/hero-img.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-} */
-
-.logo{
-  padding: 30px 0 0 30px;
-  cursor: pointer;
+  height: 100vh;
 }
 
-.logo img{
-  width: 120px;
+.hero-wrapper img{
+  padding: 30px 0 0 30px;
+  cursor: pointer;
 }
 
 .hero-text{

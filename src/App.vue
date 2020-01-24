@@ -1,11 +1,19 @@
 <template>
-  <div id="app">
-    <!-- Product catalogue -->
-    <div v-for="product in products" :key="product.id">
-      <Product  :product="product" />
-    </div>
-    <!-- END Product catalogue -->
-  </div><!-- END App -->
+    <div>
+        <!-- Products catalogue -->
+        <div class="container mx-auto px-4">
+            <div class="flex mb-4">
+                <div class="row">
+                    <!-- Loop through products and output -->
+                    <!-- :key is for Vue to keep track of items -->
+                    <div class="col-sm-4" v-for="product in products" :key="product.id">
+                        <!-- Bind product to cart -->
+                        <product  :product="product"/>
+                        </div><!-- END Product Catalogue -->
+                    </div>
+                </div>
+            </div><!-- END of App Container -->
+    </div><!-- END of Storefront -->
 </template>
 
 <script>
@@ -39,6 +47,7 @@ export default {
     })
     // Handle Error
       .catch((error) => {
+        // eslint-disable-next-line
         console.log(error);
       });
   },

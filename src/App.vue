@@ -1,19 +1,49 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <!-- Product catalogue -->
+    <div v-for="product in products" :key="product.id">
+      <Product  :product="product" />
+    </div>
+    <!-- END Product catalogue -->
+  </div><!-- END App -->
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Product from '@/components/Product.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
+    Product,
+  },
+  // Pass commerce as a prop
+  props: {
+    commerce: {
+      required: true,
+      type: Object,
+    },
+  },
+  // Return our product data
+  data() {
+    return {
+      products: [],
+    };
+  },
+
+  // When Vue app is created, run these functions to fetch data from API
+  created() {
+    // Make a request to list products
+    this.commerce.products.list().then((resp) => {
+      // Respond with products data upon a successful request
+      this.products = resp.data;
+    })
+    // Handle Error
+      .catch((error) => {
+        console.log(error);
+      });
   },
 };
+
 </script>
 
 <style>

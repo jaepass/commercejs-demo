@@ -5,7 +5,7 @@ import Vue from 'vue';
 import App from './App.vue';
 
 // Initialize store with public key, store key in variable
-const commerce = new Commerce('pk_17054571618e73520760e522b00e08ee196503b14e95c', true);
+const commerce = new Commerce('pk_17695092cf047ebda22cd36e60e0acbe5021825e45cb7', true);
 
 Vue.config.productionTip = false;
 

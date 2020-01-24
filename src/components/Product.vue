@@ -22,18 +22,26 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+body{
+  font-family: 'Adamina', sans-serif;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.card-body {
+  background-color: #E8E2D7;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+
+.card-body img{
+  border: 2px solid #292B83;
+  display: block;
+  margin: 0 auto;
 }
-a {
-  color: #42b983;
+
+.card h4{
+  color: #292B83;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 2.25px;
+  line-height: 32px;
 }
 </style>

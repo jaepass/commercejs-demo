@@ -1,19 +1,23 @@
 <template>
-    <div>
-        <!-- Products catalogue -->
-        <div class="container mx-auto px-4">
-            <div class="flex mb-4">
-                <div class="row">
-                    <!-- Loop through products and output -->
-                    <!-- :key is for Vue to keep track of items -->
-                    <div class="col-sm-4" v-for="product in products" :key="product.id">
-                        <!-- Bind product to cart -->
-                        <product  :product="product"/>
-                        </div><!-- END Product Catalogue -->
-                    </div>
-                </div>
-            </div><!-- END of App Container -->
-    </div><!-- END of Storefront -->
+  <div>
+
+    <div class="hero">
+      <img src="/logo.svg" alt="Logo">
+    </div>
+    <!-- Products catalogue -->
+    <div class="container mx-auto px-4">
+      <div class="flex mb-4">
+        <div class="row">
+          <!-- Loop through products and output -->
+          <!-- :key is for Vue to keep track of items -->
+          <div class="col-sm-4" v-for="product in products" :key="product.id">
+            <!-- Bind product to cart -->
+            <product  :product="product"/>
+          </div><!-- END Product Catalogue -->
+        </div>
+      </div>
+    </div><!-- END of App Container -->
+  </div><!-- END of Storefront -->
 </template>
 
 <script>
@@ -64,5 +68,30 @@ body {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px; */
+}
+
+/* .hero-img{
+  background-image: url("./assets/hero.png");
+  grid-area: img1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+} */
+
+.logo{
+  padding: 30px 0 0 30px;
+  cursor: pointer;
+}
+
+.logo img{
+  width: 120px;
+}
+
+.hero-text{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
 </style>

@@ -2,14 +2,16 @@ module.exports = {
   presets: [
     '@vue/cli-plugin-babel/preset',
   ],
-  // css: {
-  //   loaderOptions: {
-  //     sass: {
-  //       data: `
-  //         @import "@/scss/_variables.scss";
-  //         @import "@/scss/_mixins.scss";
-  //       `
-  //     }
-  //   }
-  // }
+  test: /\.vue$/,
+  loader: 'vue-loader',
+  options: {
+    loaders: {
+      scss: 'vue-style-loader!css-loader!sass-loader', // <style lang="scss">
+      sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax' // <style lang="sass">
+    }
+  },
+  loader: 'sass-resources-loader',
+  options: {
+    resources: path.resolve(__dirname, '../src/scss/_variables.scss')
+  }
 };

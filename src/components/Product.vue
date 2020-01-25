@@ -21,24 +21,24 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss">
 body{
-  font-family: 'Adamina', sans-serif;
+  font-family: $font-primary;
 }
 
 .card-body {
-  background-color: #E8E2D7;
+  background-color: $bg-color;
 }
 
 
 .card-body img{
-  border: 2px solid #292B83;
+  border: 2px solid $text-primary;
   display: block;
   margin: 0 auto;
 }
 
 .card h4{
-  color: #292B83;
+  color: $text-primary;
   font-size: 17px;
   font-weight: 800;
   letter-spacing: 2.25px;

@@ -59,10 +59,10 @@ export default {
 
 </script>
 
-<style>
+<style lang="scss">
 body {
-  font-family: 'Amiko', sans-serif;
-  background-color: #E8E2D7;
+  font-family: $font-primary;
+  background-color: $bg-color;
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

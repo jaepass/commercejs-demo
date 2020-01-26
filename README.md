@@ -1,4 +1,4 @@
-# commercejs-products
+# commercejs-demo
 
 ## Project setup
 ```

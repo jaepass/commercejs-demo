@@ -2,7 +2,7 @@
   <div>
 
     <div class="hero-wrapper">
-      <img src="/logo.svg" alt="Logo">
+      <img src="@/assets/logo.svg" alt="Logo">
       <div class="hero-wrapper__text">
         <h2>Curated to <br> Your Lifestyle</h2>
         <div class="btn">Shop</div>
@@ -77,7 +77,7 @@ h2 {
 }
 
 .hero-wrapper{
-  background-image: url("/hero-img.png");
+  background-image: url("./assets/hero-img.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;

@@ -1,5 +1,7 @@
 # commercejs-demo
 
+[Live site](https://jaepass.github.io/commercejs-demo/)
+
 ## Project setup
 ```
 yarn install

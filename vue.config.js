@@ -1,4 +1,7 @@
 module.exports = {
+
+  publicPath: '/commercejs-demo/',
+
   css: {
     loaderOptions: {
       sass: {

@@ -3,6 +3,9 @@
 
     <div class="hero-wrapper">
       <img src="/logo.svg" alt="Logo">
+      <div class="hero-wrapper__text">
+        <h2>Curated to your lifestyle</h2>
+      </div>
     </div>
     <!-- Products catalogue -->
     <div class="container mx-auto px-4">
@@ -63,11 +66,9 @@ export default {
 body {
   font-family: $font-primary;
   background-color: $bg-color;
-  /* -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px; */
+
 }
 
 .hero-wrapper{
@@ -76,18 +77,24 @@ body {
   background-size: cover;
   position: relative;
   height: 100vh;
+
+  img{
+    padding: 30px 0 0 30px;
+    cursor: pointer;
+  }
+
+  &__text {
+    color: $text-primary;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateX(-50%);
+    text-align: center;
+
+    h2{
+      font-weight: bold;
+    }
+  }
 }
 
-.hero-wrapper img{
-  padding: 30px 0 0 30px;
-  cursor: pointer;
-}
-
-.hero-text{
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
 </style>

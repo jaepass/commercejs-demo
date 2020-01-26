@@ -4,7 +4,8 @@
     <div class="hero-wrapper">
       <img src="/logo.svg" alt="Logo">
       <div class="hero-wrapper__text">
-        <h2>Curated to your lifestyle</h2>
+        <h2>Curated to <br> Your Lifestyle</h2>
+        <div class="btn">Shop</div>
       </div>
     </div>
     <!-- Products catalogue -->
@@ -68,7 +69,11 @@ body {
   background-color: $bg-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
+h1,
+h2 {
+  letter-spacing: 3px;
 }
 
 .hero-wrapper{
@@ -89,11 +94,16 @@ body {
     top: 50%;
     left: 20%;
     transform: translateX(-50%);
-    text-align: center;
+    text-align: left;
 
     h2{
       font-weight: bold;
+      font-size: 42px;
     }
+  }
+
+  .btn {
+    @include button-bg(#EF4E42);
   }
 }
 

@@ -16,21 +16,30 @@
           <!-- :key is for Vue to keep track of items -->
           <div class="col-sm-4" v-for="product in products" :key="product.id">
             <!-- Bind product to cart -->
-            <product  :product="product"/>
+            <Product  :product="product"
+                      @add-to-cart="addToCart(product)"
+            />
           </div><!-- END Product Catalogue -->
         </div>
       </div>
+
+      <Cart :items="cartItems"
+            @remove-from-cart="removeFromCart"
+      />
+
     </div><!-- END of App Container -->
   </div><!-- END of Storefront -->
 </template>
 
 <script>
 import Product from '@/components/Product.vue';
+import Cart from '@/components/Cart.vue';
 
 export default {
   name: 'app',
   components: {
     Product,
+    Cart,
   },
   // Pass commerce as a prop
   props: {
@@ -43,6 +52,7 @@ export default {
   data() {
     return {
       products: [],
+      cart: null,
     };
   },
 
@@ -58,6 +68,23 @@ export default {
         // eslint-disable-next-line
         console.log(error);
       });
+
+    this.commerce.cart.retrieve().then((resp) => {
+      this.cart = resp;
+    })
+      .catch((error) => {
+        // eslint-disable-next-line
+        console.log(error);
+      });
+  },
+
+  methods: {
+    // Add products to cart
+    addToCart(product) {
+      this.commerce.cart.add({ id: product.id, quantity: 1 }).then((resp) => {
+        this.cart = resp.cart;
+      });
+    },
   },
 };
 

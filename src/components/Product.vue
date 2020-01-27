@@ -9,6 +9,11 @@
             <p class="text-center text-muted card-subtitle display-5 price">
               {{product.price.formatted_with_symbol}}
             </p>
+            <button @click="$emit('add-to-cart', product)"
+                    class="btn"
+            >
+              {{'Quick Add'}}
+            </button>
         </div>
     </div><!-- End of card content -->
 </template>
@@ -28,20 +33,33 @@ body{
 
 .card-body {
   background-color: $bg-color;
+
+  img{
+    border: 2px solid $text-primary;
+    display: block;
+    margin: 0 auto;
+  }
+
+  h4{
+    color: $text-primary;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 2.25px;
+    line-height: 32px;
+  }
+
+  .btn {
+    border: 1px solid $color-accent;
+    border-radius: 0;
+    background: transparent;
+    color: $color-accent;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background: $color-accent;
+      color: white;
+    }
+  }
 }
 
-
-.card-body img{
-  border: 2px solid $text-primary;
-  display: block;
-  margin: 0 auto;
-}
-
-.card h4{
-  color: $text-primary;
-  font-size: 17px;
-  font-weight: 800;
-  letter-spacing: 2.25px;
-  line-height: 32px;
-}
 </style>
